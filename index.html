@@ -2,6 +2,43 @@
 <html>
 
 <head>
+    <style>
+        /* Style the video: 100% width and height to cover the entire window */
+#myVideo {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -999;
+}
+
+/* Add some content at the bottom of the video/page */
+.content {
+  position: fixed;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Style the button used to pause/play the video */
+#myBtn {
+  width: 200px;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+}
+
+#myBtn:hover {
+  background: #ddd;
+  color: black;
+}
+    </style>
     <title>GEOG 495 LAB 02 EXAMPLE</title>
 
     <link rel="stylesheet" href="css/main.css">
@@ -11,7 +48,7 @@
 <body>
 
     <div class="topnav" id="myTopnav">
-        <a class="active" href="index.html">Abstract</a>
+        <a class="active" href="index.html">Intro</a>
         <a href="section1.html">Section 1</a>
         <a href="section2.html">Section 2</a>
         <a href="section3.html">Section 3</a>
@@ -25,16 +62,20 @@
 
     <!-- Page content -->
     <div class="content">
-        This is abstract section.
+        The Seattle Supersonics was a professional basketball team originated in <b><a href="https://en.wikipedia.org/wiki/Seattle">Seattle</a></b>, Washington. The team was a part of the western conference and consisted of many legendary star players throughout the years of its existence. The largest rival to the Seattle Sonics was the Portland <b><a href="https://en.wikipedia.org/wiki/Portland_Trail_Blazers">Trailblazers</a></b> who existed within the same conference. After 2008, the Sonics were sold and relocated to Oklahoma City where the team name changed to the <b><a href="https://en.wikipedia.org/wiki/Oklahoma_City_Thunder">OKC Thunder</a></b>.
         <br>
         <br>
         Here is the course cover image in a scaled size:
         <br>
-        <img src="img/cover.jpg" style="width: 100%; height: auto;">
+        <img src="img/sonicslogo.jpg" style="width: 50%; height: auto;">
         <br>
         <br>
         Here is the course cover image in its original size:
-        <img src="img/cover.jpg">
+        <img src="img/sonicslogo.jpg">
+        <br>
+        <video autoplay muted loop id="myVideo">
+            <source src="Video/rain.mp4" type="video/mp4">
+          </video>
     </div>
 
 
