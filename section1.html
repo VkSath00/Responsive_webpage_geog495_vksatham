@@ -2,6 +2,18 @@
 <html>
 
 <head>
+    <style>
+        #myProgress {
+  width: 100%;
+  background-color: rgb(131, 59, 0);
+}
+
+#myBar {
+  width: 1%;
+  height: 50px;
+  background-color: rgb(212, 86, 196);
+}
+    </style>
     <title>Page Title</title>
 
     <link rel="stylesheet" href="css/main.css">
@@ -12,11 +24,11 @@
 
     <div class="topnav" id="myTopnav">
         <a href="index.html">Intro</a>
-        <a class="active" href="section1.html">Section 1</a>
-        <a href="section2.html">Section 2</a>
-        <a href="section3.html">Section 3</a>
+        <a class="active" href="section1.html">Notable Players</a>
+        <a href="section2.html">Bring Back Our Team!</a>
+        <a href="section3.html">Location and Stadium</a>
         <a href="see_also.html">See Also</a>
-        <a href="references.html">References</a>
+        <a href="references.html">Top 5 Sonics Players</a>
         <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
         <a href="javascript:void(0);" class="icon" >
             <i class="fa fa-bars"></i>
@@ -25,11 +37,58 @@
 
     <!-- Page content -->
     <div class="content">
-        This is section 1.
+        Some of the most famous players on the Seattle Supersonics are players like <b>Ray Allen, 
+        Kevin Durant, Gary Payton and Jack Sikma </b>, all who were inducted or will be inducted into 
+        the Naismath Basketball <b><a href="https://www.hoophall.com/">Hall of Fame</a></b>. 
+        Because of these players, Seattle was able to advance to the conference finals and was able
+        to win the <b><a href="https://en.wikipedia.org/wiki/1979_NBA_Finals">1979 championship</a></b>
+        <br>
+        <br>
+        <br>
+        The 1979 Championship:
+        <br>
+        <img src="img/1979champions.jpg" style="width: 50%; height: auto;">
+        <br>
     </div>
 
+    <body>
+
+        <h1>This is how bad Seattle wants its team back</h1>
+        
+        <div id="myProgress">
+          <div id="myBar">1%</div>
+        </div>
+        
+        <br>
+        <button onclick="move()">Hit me</button> 
+        
+        <script>
+        var i = 0;
+        function move() {
+          if (i == 0) {
+            i = 1;
+            var elem = document.getElementById("myBar");
+            var width = 10;
+            var id = setInterval(frame, 10);
+            function frame() {
+              if (width >= 100) {
+                clearInterval(id);
+                i = 0;
+              } else {
+                width++;
+                elem.style.width = width + "%";
+                elem.innerHTML = width  + "%";
+              }
+            }
+          }
+        }
+        </script>
+        
+        </body>
+        </html>
 </body>
 
-<script src="js/main.js"></script>
+
+
 
 </html>

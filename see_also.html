@@ -11,12 +11,12 @@
 <body>
 
     <div class="topnav" id="myTopnav">
-        <a href="index.html">Abstract</a>
-        <a href="section1.html">Section 1</a>
-        <a href="section2.html">Section 2</a>
-        <a href="section3.html">Section 3</a>
+        <a href="index.html">Intro</a>
+        <a href="section1.html">Notable Players</a>
+        <a href="section2.html">Bring Back Our Team!</a>
+        <a href="section3.html">Location and Stadium</a>
         <a class="active" href="see_also.html">See Also</a>
-        <a href="references.html">References</a>
+        <a href="references.html">Top 5 Sonics Players</a>
             <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
         <a href="javascript:void(0);" class="icon">
             <i class="fa fa-bars"></i>
@@ -25,8 +25,79 @@
 
     <!-- Page content -->
     <div class="content">
-        This is see also section.
+        <ul>
+            <li><b><a href="https://en.wikipedia.org/wiki/Squatch">Squatch</a></b>, the team mascot</li>
+            <li><b><a href="https://en.wikipedia.org/wiki/Bob_Blackburn_(announcer)">Bob Blackburn</a></b>, Sonics Radio Broadcaster</li></li>
+            <li><b><a href="https://en.wikipedia.org/wiki/Seattle_SuperSonics_relocation_to_Oklahoma_City">Save Our Sonics</a></b>, grassroots movement to prevent the relocation of the team to OKC</li>
+          </ul>
     </div>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+        body {
+          font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        .flip-card {
+          background-color: transparent;
+          width: 300px;
+          height: 300px;
+          perspective: 1000px;
+        }
+        
+        .flip-card-inner {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          text-align: center;
+          transition: transform 0.6s;
+          transform-style: preserve-3d;
+          box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        }
+        
+        .flip-card:hover .flip-card-inner {
+          transform: rotateY(180deg);
+        }
+        
+        .flip-card-front, .flip-card-back {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+        }
+        
+        .flip-card-front {
+          background-color: rgb(179, 147, 8);
+          color: black;
+        }
+        
+        .flip-card-back {
+          background-color: #1c6e04;
+          color: rgb(160, 117, 0);
+          transform: rotateY(180deg);
+        }
+        </style>
+        </head>
+        <body>
+        
+        <h1>Digital Basketball Card</h1>
+        <h3>Hover on the image:</h3>
+        
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="img/Squatch.jpg" alt="Avatar" style="width:300px;height:300px;">
+            </div>
+            <div class="flip-card-back">
+              <h1>Squatch</h1> 
+              <p>Mascot</p> 
+              <p>Seattle loves Squatch</p>
+            </div>
+          </div>
+        </div>
+        
+        </body>
 
 
 </body>
